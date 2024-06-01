@@ -3,25 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-    </style>
 </head>
-<body>
-    <div>1.table design assignment</div>
-    <table>
+<style>
+    @media  (max-width:500px) {
+        .row:nth-child(2){
+            flex-direction: column-reverse!important;
+        }   
+    }
 
-    </table>
-    <div style="display: flex; background-color: red; border-radius: 5x;">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
+    *{
+        margin:0;
+        box-sizing: border-box;
+        font-size: 2rem;
+        color: #e4d315;
+        text-align: center;
+        
+    }
+    .container{
+        background-color: rgb(232, 187, 187);
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .row{
+        height: 10vh;
+        flex: 2;
+        margin: 2px;
+        justify-content:  center;
+    }
+    .row:nth-child(1){
+        background-color: #510000;
+    }
+    .row:nth-child(2){
+        background-color: #a00028;
+        display: flex;
+        flex-direction: row;
+
+    }
+    .row:nth-child(3){
+        background-color: #510000;
+    }
+    .col{
+        height: 100%;
+        width: 100%;
+        margin: 1px;
+    }
+    .col:nth-child(1){
+        background-color: #740000;
+    }
+    .col:nth-child(2){
+        background-color: #9f3434;
+    }  
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            Header
+        </div>
+        <div class="row">
+            <div class="col">
+                Left
+            </div>
+            <div class="col">
+                Body
+            </div>
+            <div class="col">
+                Sidebar
+            </div>
+        </div>
+        <div class="row">
+            Footer
+        </div>
+        
     </div>
 </body>
 </html>
